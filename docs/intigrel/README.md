@@ -467,17 +467,10 @@ If you encounter issues not covered in this documentation:
 | Service Featured Image | 800 × 800 (square) |
 | Hero Image | 665 × 512 |
 
-### Keyboard Shortcuts
-
-| Action | Shortcut |
-|--------|----------|
-| Save | Ctrl+S (Cmd+S on Mac) |
-| Search | Ctrl+K (Cmd+K on Mac) |
-| Close Modal | Esc |
 
 ---
 
-**Last Updated:** October 2025
-**CMS Version:** Filament v3
+**Last Updated:** October 09 2025
+**CMS Version:** Intigrel V1
 
 For the latest updates and features, consult with your developer.
