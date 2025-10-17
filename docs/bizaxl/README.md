@@ -13,7 +13,7 @@
 
 ### Accessing the CMS
 
-1. Navigate to: **https://bizaxl.com/admin**
+1. Navigate to: **https://yourdomain.com/admin**
 2. Log in with your admin credentials
 3. You'll be taken to the main dashboard
 
@@ -70,7 +70,7 @@ Each industry consists of:
 
 **Title** (Required)
 - The main industry name (e.g., "Energy & Utilities")
-- Minimum 10 characters, maximum 60 characters
+- Minimum 6 characters, maximum 25 characters
 - Auto-generates the slug when you type
 - Best Practice: Keep it clear and descriptive
 
@@ -79,7 +79,7 @@ Each industry consists of:
 - Auto-generated from title (e.g., "energy-utilities")
 - Must be unique across all industries
 - Used in URLs: `/industries/your-slug`
-- ⚠️ Don't change after publishing - breaks existing links
+- ⚠️ **Editing Restrictions:** On edit screens, the slug field is disabled for non-super admins to prevent breaking external links. Contact your admin if you need to change a slug.
 
 **Subtitle** (Required)
 - Brief description of the industry (50-255 characters)
@@ -108,7 +108,7 @@ This section controls what visitors see when they click into a specific industry
 
 **Page Description** (Required)
 - Rich text content below the page title
-- Minimum 100 characters
+- 100-350 characters
 - Explains how Bizaxl helps companies in this industry
 - Can include multiple paragraphs
 - Best Practice: Focus on value proposition and outcomes
@@ -119,6 +119,7 @@ This section controls what visitors see when they click into a specific industry
 - The CMS editor helps you crop to the correct size
 - Leave empty if you don't have a good visual
 - Maximum file size: 15MB
+- Manual compression recommended: Use compressor.io (lossless mode)
 - Best Practice: Use high-quality screenshots showing your solution in action
 
 ---
@@ -184,10 +185,12 @@ These are the main content blocks on the industry page, showcasing specific prob
    - Text for the CTA button
    - 5-25 characters
    - Example: "Learn More", "Get Started", "Book Demo"
+   - ⚠️ **Important:** Don't add button labels or URLs unless essential. Fallback buttons are already in place.
 
 7. **Button Link** (Optional)
    - URL where the button should link
-   - Can be internal (/contact) or external (https://example.com)
+   - Must be full URL (https://example.com)
+   - ⚠️ **Important:** Don't add button labels or URLs unless essential. Fallback buttons are already in place.
 
 **Managing Solution Sections:**
 - Click the section header to expand/collapse
@@ -208,7 +211,12 @@ Override the default call-to-action button that appears throughout the industry 
 
 **Button Link** (Optional)
 - Custom URL for the button
-- Must be a valid URL format
+- Must be a full URL starting with https://
+
+**⚠️ Important Note:**
+- **Do not add button labels or URLs unless absolutely essential**
+- Fallback buttons are already in place and work for most cases
+- Only customize if you have a specific, unique call-to-action requirement
 
 **When to Edit:**
 - Only modify if you want to change the default behavior
@@ -296,17 +304,21 @@ Every change made to an industry is tracked and logged.
 2. Select **Activities**
 3. View the complete change history
 
-**Activity Log Shows:**
-- Date and time of changes
-- User who made the changes
-- What was changed (field names and values)
-- Before and after states
 
-**Use Cases:**
-- Audit trail for compliance
-- Track who changed what and when
-- Revert unwanted changes by seeing original values
-- Accountability for content updates
+#### Restoring Previous Values
+
+If you need to undo changes or restore previous content:
+
+1. **View the Activity Log** - Navigate to the industry's activities page
+2. **Find the change** - Locate the entry showing the change you want to undo
+3. **Click the Restore button** - Each activity entry has a restore action that will revert the record to that previous state
+4. **Confirm** - The system will restore the values from that point in time
+
+**Important Notes:**
+- The restore button automatically reverts all changes from that specific activity entry
+- The activity log preserves the complete history, so you can restore to any previous state
+- Restoring creates a new activity entry, so the action itself is tracked
+- If you're unsure about restoring changes, contact your administrator for assistance
 
 ---
 
@@ -359,11 +371,10 @@ Every change made to an industry is tracked and logged.
 - Search terms: industry keywords (e.g., "energy", "health", "money")
 - Icons should be immediately recognizable
 - Maintain consistency across similar industries
-- Test how icons look on both light and dark backgrounds
 
 ### Slugs and URLs
 
-1. **Let slugs auto-generate** from titles
+1. **Let slugs auto-generate** from titles - The auto-generation works well in most cases. Take control and edit manually if it doesn't look right.
 2. **Keep slugs lowercase** with hyphens (not underscores)
 3. **Don't change slugs after publishing** - This breaks:
    - Existing links from other websites
@@ -419,6 +430,19 @@ Every change made to an industry is tracked and logged.
 
 ---
 
+#### Slug Field is Disabled (Can't Edit)
+
+**Problem:** The slug field is grayed out and you cannot edit it.
+
+**Reason:** For security and SEO purposes, the slug field is disabled on edit screens for non-super admins to prevent breaking external links.
+
+**Solution:**
+- If you genuinely need to change the slug, contact your administrator
+- Explain why the slug needs to be changed
+- The admin can evaluate if the change is necessary and update it safely
+
+---
+
 #### Image Upload Fails
 
 **Problem:** Image file is too large or wrong format.
@@ -427,6 +451,7 @@ Every change made to an industry is tracked and logged.
 1. Check file size (max 15MB)
 2. Use JPEG, PNG, WebP, or GIF formats
 3. Compress large images before uploading:
+   - Use Compressor.io (https://compressor.io) - Recommended, use lossless mode
    - Use TinyPNG (https://tinypng.com)
    - Use Squoosh (https://squoosh.app)
    - Use your OS's built-in image compression
@@ -578,11 +603,11 @@ If you encounter issues not covered in this documentation:
 
 | Field | Minimum | Maximum | Notes |
 |-------|---------|---------|-------|
-| Industry Title | 10 | 60 | Auto-generates slug |
+| Industry Title | 6 | 25 | Auto-generates slug |
 | Slug | - | 255 | Must be unique |
 | Subtitle | 50 | 255 | For SEO & listings |
 | Page Title | 20 | 60 | Industry detail page |
-| Page Description | 100 | - | Rich text field |
+| Page Description | 100 | 350 | Rich text field |
 | Benefit | 15 | 60 | 3 max per industry |
 | Solution Badge | 5 | 20 | Category label |
 | Solution Title | 15 | 60 | Feature heading |
