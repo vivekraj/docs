@@ -89,7 +89,7 @@ Each industry consists of:
 
 **Industry Icon** (Required)
 - Visual representation of the industry
-- Select from 200+ Lucide icons using the visual picker
+- Select from 1000+ Lucide icons using the visual picker
 - Search functionality available (e.g., search "energy", "truck", "health")
 - Icon displays throughout the website
 - Best Practice: Choose an icon that clearly represents the industry
