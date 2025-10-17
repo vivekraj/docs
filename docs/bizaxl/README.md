@@ -664,7 +664,7 @@ If you encounter issues not covered in this documentation:
 **Last Updated:** October 17, 2025
 **CMS Version:** Bizaxl V1
 
-For technical support or feature requests, contact your development team or email hello@vivekraj.dev.
+For technical support or feature requests, contact your developer or email hello@vivekraj.dev.
 
 ---
 
